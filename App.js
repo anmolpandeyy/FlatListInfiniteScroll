@@ -112,6 +112,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <FlatList
+          extraData={this.state.isLoading}
           data={this.state.dataSource}
           renderItem={this.renderItem}
           keyExtractor={(item, index) => index.toString()}
